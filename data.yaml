@@ -1,0 +1,69 @@
+users:
+  j:
+    username: j
+    articleIds: [1]
+    commentIds: [1]
+  sp28:
+    username: sp28
+    articleIds: [2]
+    commentIds: [2]
+  wh:
+    username: wh
+    articleIds: [3]
+    commentIds: [3]
+articles:
+  '1':
+    id: 1
+    title: what is this?
+    url: '2'
+    username: j
+    commentIds: [1]
+    upvotedBy: []
+    downvotedBy: [sp28]
+    comments:
+    - &id0001
+      id: 1
+      body: This is brilliant!
+      articleId: 1
+      username: j
+      commentIds: []
+      upvotedBy: [j]
+      downvotedBy: []
+  '2':
+    id: 2
+    title: Loading JS
+    url: JS
+    username: sp28
+    commentIds: [2]
+    upvotedBy: [sp28]
+    downvotedBy: []
+    comments: []
+  '3':
+    id: 3
+    title: What ifs
+    url: If
+    username: wh
+    commentIds: [3]
+    upvotedBy: [wh]
+    downvotedBy: []
+    comments: []
+nextArticleId: 4
+comments:
+  '1': *id0001
+  '2':
+    id: 2
+    body: Best way
+    articleId: 2
+    username: sp28
+    commentIds: []
+    upvotedBy: [sp28]
+    downvotedBy: []
+  '3':
+    id: 3
+    body: This user is cool!
+    articleId: 3
+    username: wh
+    commentIds: []
+    upvotedBy: [wh]
+    downvotedBy: []
+nextCommentId: 4
