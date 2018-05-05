@@ -355,7 +355,7 @@ function downvoteComment(url, request) {
   const response = {};
 
   if (savedComment && database.users[username]) {
-    savedComment = vote(savedComment, username);
+    savedComment = downvote(savedComment, username);
 
     response.body = {comment: savedComment};
     response.status = 200;
